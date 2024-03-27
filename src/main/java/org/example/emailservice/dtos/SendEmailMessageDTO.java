@@ -12,5 +12,4 @@ public class SendEmailMessageDTO {
     private String from;
     private String subject;
     private String body;
-
 }
