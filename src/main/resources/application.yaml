@@ -5,3 +5,30 @@ spring:
   application:
     name: "EmailService"
 
+logging:
+  level:
+    root: "TRACE"
+##    can tune log level of specific package
+#    org:
+#      apache:
+#        kafka: off
+
+
+
+#Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,env,beans"
+  info:
+    env:
+      enabled: "true"
+
+#Actuator
+# /actuator/info
+info:
+  application:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
